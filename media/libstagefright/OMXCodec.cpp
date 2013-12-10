@@ -1542,6 +1542,8 @@ status_t OMXCodec::setVideoOutputFormat(
         CHECK_EQ(err, (status_t)OK);
         CHECK_EQ((int)format.eCompressionFormat, (int)OMX_VIDEO_CodingUnused);
 
+#if 0
+
         CHECK(format.eColorFormat == OMX_COLOR_FormatYUV420Planar
                || format.eColorFormat == OMX_COLOR_FormatYUV420SemiPlanar
                || format.eColorFormat == OMX_COLOR_FormatCbYCrY
@@ -1562,6 +1564,8 @@ status_t OMXCodec::setVideoOutputFormat(
             else
                 format.eColorFormat = OMX_COLOR_FormatYUV420SemiPlanar;
         }
+#endif
+
 #endif
 
         int32_t colorFormat;
